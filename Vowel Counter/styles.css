@@ -1,30 +1,92 @@
-.container{
-    background-color: white;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
+.container{
+    height: 100vh;
+    background-color: rgb(16, 121, 80);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 h1{
-    color: #111; 
+    color:white; 
     font-family: 'Helvetica Neue', sans-serif; 
     font-size: 100px; 
     font-weight: bold; 
     letter-spacing: -1px; 
     line-height: 1; 
     text-align: center; 
+    padding: 25px;
 }
 
 p{
-    color: #111; 
+    color: white; 
     font-family: 'Helvetica Neue', sans-serif; 
-    font-size: 50px; 
+    font-size: 25px; 
     font-weight: bold; 
     letter-spacing: -1px; 
     line-height: 1; 
     text-align: center; 
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-  }
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#text{
+    margin-top: 20px;
+    height: 30px;
+}
+#check{
+    margin-bottom: 50px;
+    width: 150px;
+    height: 30px;
+    display:inline-block;
+    border: 2px solid white;
+    background-color: transparent;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#check:hover{
+    border: none;
+    background-color: white;
+    color: rgb(16, 121, 80);
+    transform: scale(0.95);
+    font-weight:normal;
+}
+
+@media all and (max-width: 440px) {
+    h1{
+        font-size: 75px;
+    }
+    #text{
+        width: 250px;
+    }
+}
+@media all and (max-width: 330px) {
+    h1{
+        font-size: 50px;
+    }
+    #text{
+        width: 200px;
+    }
+    #check{
+        width: 100px;
+        height: 25px;
+    }
+    p{
+        font-size: 20px;
+    }
+}
